@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/PageNotFound";
@@ -9,7 +9,7 @@ import Products from "./pages/Products";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -20,7 +20,7 @@ function App() {
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
